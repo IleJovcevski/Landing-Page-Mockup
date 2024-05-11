@@ -1,0 +1,611 @@
+:root {
+    --sidebar-main: #F8F8F8;
+    --sidebar-selected: #E4E4E6;
+    --border-gray: #E3E3E3;
+    --font-gray: #99999B;
+    --orange-selected: #FFA76C;
+    --font-light: #CDCDCD;
+    --font-dark: #7A7A7D;
+    --url-blue: #4FB3DC;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(to bottom right,#001114, #01042D);
+    background-attachment: fixed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 7%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    border-bottom-style: solid;
+    border-color: var(--border-gray);
+    border-width: 2px;
+    color: var(--font-light);
+    background-color: #CECFDF;
+}
+
+.main-container {
+    margin-top: 140px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 1.5% 3% 1.5% 3%;
+}
+
+.call-to-action {
+    background-image: url("images/main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / span 1;
+    height: 102%;
+    color: white;
+    border-radius: 5%;
+}
+
+.main-text {
+    font-size: 5em;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.main-text p {
+    margin: 0;
+}
+
+.sub-text {
+    font-size: 2em;
+    margin-left: 20%;
+}
+
+.action-button {
+    margin-left: 20%;
+}
+
+.customer-feedback {
+    grid-column: 2 / span 1;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 7%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    background-color: #CECFDF;
+ }
+
+ .footer-social {
+    display: flex;
+    align-self: center;
+    margin-left: 15%;
+ }
+
+ .social-icons-holder {
+    display: flex;
+ }
+
+ .text-social-holder {
+    font-size: 2.0em;
+    font-weight: 500;
+ }
+
+ .icon-holder {
+    display: block;
+    align-self: center;
+    width: 5%;
+    margin: 10px;
+ }
+
+ .icon-holder img {
+    width: -webkit-fill-available;
+ }
+
+ .footer-trademark {
+    grid-column: 2 / span 1;
+    text-align: center;
+    align-content: center;
+ }
+
+.starlight-logo {
+    display: flex;
+}
+
+.logo-holder {
+    display: block;
+    width: 20%;
+    height: 55%;
+}
+
+.logo-holder img {
+    width: 100%;
+}
+
+.text-logo-holder {
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #000000;
+}
+
+.algolia-logo {
+    grid-column: 2 / span 1;
+    display: flex;
+    margin: auto;
+    margin-top: 4.4%;
+}
+
+.algolia-logo p {
+    font-size: 0.8em;
+    padding-top: 3%;
+}
+
+.algolia-logo img {
+    padding-top: 9%;
+    width: 25%;
+    height: 20%;
+    margin-left: 2%;
+}
+
+.signing-section {
+    margin-left: 45%;
+    grid-column: 3 / span 1;
+    display: flex;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.header-flex {
+    flex-grow: 1;
+}
+
+.nav {
+    flex-grow: 8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-white);
+    font-size: 0.95em;
+  }
+    
+  .nav-list {
+    display: flex;
+    margin-left: 25px;
+    list-style: none;
+  }
+    
+  .nav-list a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000000;
+    opacity: 64%;
+  }
+
+.signing-section p {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.login-button {
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 20px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #CECFDF;
+    width: 152px;
+}
+
+.signup-button {
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 20px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #01042D;
+    color: #CECFDF;
+    width: 152px;
+}
+
+.order-button {
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 20px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #E4973D;
+    color: #01042D;
+    width: 152px;
+}
+
+.selected {
+    border-bottom: #01042D;
+    border-bottom-style: solid;
+}
+
+.selected-p {
+    border-bottom-style: solid;
+    border-color: var(--orange-selected);
+    color: var(--font-dark);
+    font-weight: 600;
+}
+
+.selected-div {
+    background-color: var(--sidebar-selected);
+}
+
+.resultbar {
+    position: fixed;
+    top: 10%;
+    left: 18.1%;
+    height: 9.7%;
+    border-bottom-style: solid;
+    border-color: var(--border-gray);
+    border-width: 2px;
+    display: block;
+    width: 78.4%;
+    color: var(--font-dark);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-left: 2.5%;
+    padding-right: 1.0%;
+}
+
+.results-container {
+    color: var(--font-light);
+    font-size: 0.7em;
+    background-color: #CECFDF;
+    border-radius: 5% 5% 0% 0%;
+    border: 10px solid black;
+}
+
+.click-for-more {
+    text-align: center;
+}
+
+.click-for-more-button {
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 20px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #CECFDF;
+}
+
+.loading {
+    position: fixed;
+    top: 10%;
+    left: 10.2%;
+    width: 80.8%;
+    height: 80%;
+    background-image: url(./images/loading_icon.webp);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: center;
+}
+
+.loading .article {
+    display: none;
+}
+
+.article {
+    display: flex;
+    width: 99.8%;
+    height: 12.15%;
+    border-bottom-style: solid;
+    border-color: var(--border-gray);
+    border-width: 2px;
+}
+
+.image-preview {
+    width: 6.5%;
+    height: 75%;
+    margin: auto 2% auto 2%;
+}
+
+.image-preview img {
+    width: 86%;
+    height: -webkit-fill-available;
+    padding: 2px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.title {
+    grid-row: 1 / span 1;
+    color: var(--font-dark);
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.social {
+    grid-row: 2 / span 1;
+    display: flex;
+    align-items: center;
+}
+
+.social i {
+    padding-right: 3%;
+}
+
+.social p {
+    padding-right: 3%;
+    white-space: nowrap;
+}
+
+.url {
+    color: var(--url-blue);;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.share {
+    display: flex;
+    margin-left: auto;
+    padding-right: 2%;
+}
+
+.share i {
+    margin: auto;
+    padding-right: 10px;
+}
+
+.share p {
+    margin: auto;
+    padding-right: 10px
+}
+
+@media only screen and (min-width: 1080px) {
+    .logo-holder img {
+        width: 100%;
+    }
+
+    .algolia-logo {
+        grid-column: 2 / span 1;
+        display: flex;
+        margin: auto;
+    }
+
+    .algolia-logo p {
+        padding-top: 0%;
+    }
+
+    .algolia-logo img {
+        margin: auto;
+        padding-top: 0%;
+        width: 25%;
+        height: 20%;
+        margin-left: 2%;
+    }
+
+    #expand {
+        display: none;
+    }
+
+    .signing-section {
+        margin-left: 0%;
+    }
+
+}
+
+@media only screen and (max-width: 1080px) {
+    .signing-section {
+        margin-left: 0%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .header {
+        font-size: 1.1em;
+    }
+    
+    .upper {
+        grid-row: 1 / span 1;
+        margin-top: 10px;
+    }
+    
+    .lower {
+        grid-row: 2 / span 1;
+        margin-bottom: -20px;
+    }
+
+    #input-text {
+        width: 270px;
+    }
+
+    .algolia-logo img {
+        padding-top: 0%;
+        width: 25%;
+        height: 20%;
+    }
+
+    .results-container {
+        font-size: 0.8em;
+    }
+
+    .share {
+        padding-right: 1%;
+    }
+
+    .image-preview img {
+        width: 62%;
+    }
+
+    .signing-section {
+        margin-left: 45%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        margin-left: 0%;
+    }
+    
+    .logo-holder {
+        width: 70%;
+        height: 20%;
+        padding: 2px;
+        margin: auto;
+    }
+    
+    .logo-holder img {
+        width: 100%;
+    }
+    
+    .text-logo-holder {
+        line-height: 65%;
+        font-weight: 200;
+        font-size: 0.6em;
+        padding: 2px;
+        margin: auto;
+    }
+
+    .upper {
+        margin-top: -10px;
+    }
+    
+    .lower {
+        margin-bottom: -25px;
+    }
+    
+    .search-bar {
+        grid-column: 2 / span 2;
+        margin-top: 7.5%;
+    }
+    
+    #selection {
+        width: 65px;
+    }
+    
+    #input-text {
+        width: 45px;
+    }
+    
+    .algolia-logo {
+        margin-top: 13%;
+    }
+
+    .algolia-logo img {
+        padding-top: 19%;
+        width: 50%;
+        margin-left: 2%;
+    }
+    
+    .signing-section {
+        flex-direction: column;
+        margin-left: 0%;
+        font-size: 0.6em;
+        font-weight: 400;
+    }
+    
+    .signing-section p {
+        margin: 3px;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    
+    .selected-p {
+        border-bottom-style: solid;
+        border-color: var(--orange-selected);
+        color: var(--font-dark);
+        font-weight: 600;
+    }
+    
+    .selected-div {
+        background-color: var(--sidebar-selected);
+    }
+    
+    .results-container {
+        width: 91%;
+    }
+
+    .pushedResults {
+        top: 495px;
+        left: 5%;
+    }
+    
+    .loading {
+        position: fixed;
+        left: 10.2%;
+        width: 89.7%;
+    }
+    
+    .loading .article {
+        display: none;
+    }
+    
+    .article {
+        display: -webkit-box;
+    }
+    
+    .image-preview {
+        width: 12%;
+    }
+    
+    .image-preview img {
+        width: 100%;
+    }
+    
+    .content {
+        width: 60%;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        font-size: 0.80em;
+    }
+    
+    .title {
+        width: 55%;
+    }
+
+    .title p {
+        overflow: hidden;
+        max-height: 28px;
+    }
+    
+    .social {
+        width: 55%
+    }
+    
+    .social i {
+        padding-right: 3%;
+    }
+    
+    .social p {
+        padding-right: 3%;
+        white-space: nowrap;
+    }
+    
+    .url {
+        color: var(--url-blue);;
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .share p {
+        display: none;
+    }
+        
+}
